@@ -1,0 +1,6 @@
+id,diagnosis_id,question,category,weight,answer_type,option1,option2,option3,option4,option5
+1,side-hustle,副業に挑戦したいと思っていますか？,motivation,1.0,satisfaction,全く思っていない,少し気になる,真剣に考えている,具体的に検討中,すでに始めている
+2,side-hustle,本業以外に使える時間は週に何時間ありますか？,time,1.2,frequency,ほぼない,週2〜3時間,週5〜10時間,週10〜20時間,週20時間以上
+3,side-hustle,自分の得意なスキルを言語化できますか？,skill,1.1,behavior,全くできない,なんとなく分かる,短くなら言える,具体的に言える,収益化できるレベルで説明できる
+4,side-hustle,SNSやブログで情報発信をしたことがありますか？,action,1.0,experience,全くない,少し試したことがある,継続したことがある,フォロワーがいる,収益化したことがある
+5,side-hustle,失敗やリスクへの耐性はありますか？,mindset,1.1,behavior,全く耐えられない,不安が大きい,どちらでもない,ある程度受け入れられる,前向きに挑戦できる
