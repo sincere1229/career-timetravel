@@ -21,26 +21,14 @@ export default function HomePage() {
         }}
       >
         <div
-          style={{
-            position: 'absolute',
-            right: '-8%',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            opacity: 0.55,
-          }}
-        >
-          <ClockDial size={680} />
-        </div>
-
-        <div
           className="hero-chrono-image"
           style={{
             position: 'absolute',
-            right: '4%',
-            bottom: 0,
+            right: 0,
+            top: 0,
+            width: '56%',
             height: '100%',
-            display: 'flex',
-            alignItems: 'flex-end',
+            overflow: 'hidden',
             zIndex: 1,
           }}
         >
@@ -48,11 +36,18 @@ export default function HomePage() {
             src="/chrono-main.png"
             alt="Chrono - Career TimeTravel 未来案内人"
             style={{
-              height: '92%',
-              width: 'auto',
-              maxWidth: 'none',
-              objectFit: 'contain',
-              filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.55))',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center 20%',
+            }}
+          />
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background:
+                'linear-gradient(90deg, #060d1f 0%, rgba(6,13,31,0.5) 18%, transparent 45%), linear-gradient(0deg, #060d1f 0%, transparent 30%)',
             }}
           />
         </div>
@@ -285,13 +280,14 @@ export default function HomePage() {
         }
         @media (max-width: 900px) {
           .hero-chrono-image {
-            opacity: 0.35;
-            right: -10% !important;
+            opacity: 0.4;
+            width: 75% !important;
           }
         }
         @media (max-width: 560px) {
           .hero-chrono-image {
-            opacity: 0.22;
+            opacity: 0.28;
+            width: 95% !important;
           }
         }
       `}</style>

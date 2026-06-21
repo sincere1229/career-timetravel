@@ -406,10 +406,10 @@ function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: T
       </div>
 
       <h2 style={{ fontSize: '0.92rem', color: 'var(--chrono-ice)', marginBottom: 18 }}>
-        あなたの傾向に近い選択肢
+        比較しておきたい、あなたに近い選択肢
       </h2>
       <p style={{ fontSize: '0.82rem', color: 'var(--chrono-text-dim)', marginBottom: 22, lineHeight: 1.8 }}>
-        相性の高い順に並んでいます。最終的にどれを選ぶかは、あなた次第です。
+        相性の高い順に並んでいますが、実際の相性は使ってみないと分かりません。無料のサービスなら、上位2〜3個はまとめて試して、合わなかったものだけ後で外す形がおすすめです。
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 44 }}>
@@ -476,6 +476,34 @@ function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: T
             </div>
           );
         })}
+      </div>
+
+      <div
+        className="glass-card card-pad"
+        style={{
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 14,
+          marginBottom: 44,
+          background: 'rgba(212,175,55,0.05)',
+          borderColor: 'rgba(212,175,55,0.25)',
+        }}
+      >
+        <img
+          src="/chrono-small.png"
+          alt="Chrono"
+          style={{
+            width: 40,
+            height: 40,
+            borderRadius: '50%',
+            objectFit: 'cover',
+            border: '1px solid rgba(212,175,55,0.4)',
+            flexShrink: 0,
+          }}
+        />
+        <p style={{ fontSize: '0.84rem', color: 'var(--chrono-silver)', lineHeight: 1.9, margin: 0 }}>
+          「どれか1つに絞る」よりも、「気になった2〜3個、まとめて登録してみる」の方が、後悔は少ないものです。無料で使えるサービスなら、迷っている時間より試している時間の方が、結局は近道になります。
+        </p>
       </div>
 
       <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
