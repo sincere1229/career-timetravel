@@ -18,28 +18,51 @@ export default function ChronoPage() {
           background: 'radial-gradient(ellipse 70% 60% at 80% 10%, rgba(18,59,109,0.45), transparent)',
         }}
       >
-        <div style={{ position: 'absolute', right: '-10%', top: '-10%', opacity: 0.6 }}>
+        <div style={{ position: 'absolute', right: '-10%', top: '-10%', opacity: 0.35 }}>
           <ClockDial size={520} />
         </div>
-        <div className="container" style={{ position: 'relative', zIndex: 2, maxWidth: 680 }}>
-          <div className="eyebrow">Profile</div>
-          <h1
+        <div
+          className="container chrono-profile-grid"
+          style={{
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 980,
+            display: 'grid',
+            gridTemplateColumns: '1fr 360px',
+            gap: 48,
+            alignItems: 'center',
+          }}
+        >
+          <div>
+            <div className="eyebrow">Profile</div>
+            <h1
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontStyle: 'italic',
+                fontSize: 'clamp(2.4rem, 6vw, 3.6rem)',
+                margin: '14px 0 6px',
+                color: 'var(--chrono-white)',
+              }}
+            >
+              Chrono
+            </h1>
+            <div style={{ fontFamily: 'var(--font-heading-jp)', fontSize: '1.1rem', color: 'var(--chrono-silver)', marginBottom: 24 }}>
+              ― クロノ ― 未来案内人・タイムトラベルナビゲーター
+            </div>
+            <p style={{ color: 'var(--chrono-text-dim)', lineHeight: 1.9, fontSize: '0.98rem' }}>
+              「未来の自分に、会いに行こう。」
+            </p>
+          </div>
+          <div
             style={{
-              fontFamily: 'var(--font-display)',
-              fontStyle: 'italic',
-              fontSize: 'clamp(2.4rem, 6vw, 3.6rem)',
-              margin: '14px 0 6px',
-              color: 'var(--chrono-white)',
+              borderRadius: 20,
+              overflow: 'hidden',
+              border: '1px solid rgba(212,175,55,0.3)',
+              boxShadow: '0 20px 50px rgba(0,0,0,0.4)',
             }}
           >
-            Chrono
-          </h1>
-          <div style={{ fontFamily: 'var(--font-heading-jp)', fontSize: '1.1rem', color: 'var(--chrono-silver)', marginBottom: 24 }}>
-            ― クロノ ― 未来案内人・タイムトラベルナビゲーター
+            <img src="/chrono-bust.png" alt="Chrono" style={{ width: '100%', height: 'auto', display: 'block' }} />
           </div>
-          <p style={{ color: 'var(--chrono-text-dim)', lineHeight: 1.9, fontSize: '0.98rem' }}>
-            「未来の自分に、会いに行こう。」
-          </p>
         </div>
       </section>
 
@@ -83,6 +106,14 @@ export default function ChronoPage() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 760px) {
+          .chrono-profile-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }

@@ -26,10 +26,35 @@ export default function HomePage() {
             right: '-8%',
             top: '50%',
             transform: 'translateY(-50%)',
-            opacity: 0.85,
+            opacity: 0.55,
           }}
         >
           <ClockDial size={680} />
+        </div>
+
+        <div
+          className="hero-chrono-image"
+          style={{
+            position: 'absolute',
+            right: '4%',
+            bottom: 0,
+            height: '100%',
+            display: 'flex',
+            alignItems: 'flex-end',
+            zIndex: 1,
+          }}
+        >
+          <img
+            src="/chrono-main.png"
+            alt="Chrono - Career TimeTravel 未来案内人"
+            style={{
+              height: '92%',
+              width: 'auto',
+              maxWidth: 'none',
+              objectFit: 'contain',
+              filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.55))',
+            }}
+          />
         </div>
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
@@ -90,27 +115,27 @@ export default function HomePage() {
               style={{
                 aspectRatio: '1',
                 display: 'flex',
-                alignItems: 'center',
+                alignItems: 'flex-end',
                 justifyContent: 'center',
                 position: 'relative',
                 overflow: 'hidden',
               }}
             >
-              <div style={{ position: 'absolute', inset: 0, opacity: 0.5 }}>
+              <div style={{ position: 'absolute', inset: 0, opacity: 0.35 }}>
                 <ClockDial size={420} />
               </div>
-              <span
+              <img
+                src="/chrono-bust.png"
+                alt="Chrono"
                 style={{
-                  fontFamily: 'var(--font-display)',
-                  fontStyle: 'italic',
-                  fontSize: '2.6rem',
-                  color: 'var(--chrono-white)',
                   position: 'relative',
                   zIndex: 2,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center top',
                 }}
-              >
-                Chrono
-              </span>
+              />
             </div>
 
             <div>
@@ -256,6 +281,17 @@ export default function HomePage() {
         @media (max-width: 800px) {
           .chrono-intro-grid {
             grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 900px) {
+          .hero-chrono-image {
+            opacity: 0.35;
+            right: -10% !important;
+          }
+        }
+        @media (max-width: 560px) {
+          .hero-chrono-image {
+            opacity: 0.22;
           }
         }
       `}</style>

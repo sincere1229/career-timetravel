@@ -334,6 +334,23 @@ function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: T
 
   return (
     <div className="container section" style={{ maxWidth: 760 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 18 }}>
+        <img
+          src="/chrono-small.png"
+          alt="Chrono"
+          style={{
+            width: 64,
+            height: 64,
+            borderRadius: '50%',
+            objectFit: 'cover',
+            border: '1px solid rgba(212,175,55,0.5)',
+            flexShrink: 0,
+          }}
+        />
+        <div style={{ fontSize: '0.84rem', color: 'var(--chrono-ice)' }}>
+          Chronoより：診断、お疲れさまでした。あなたの傾向を見てみましょう。
+        </div>
+      </div>
       <div className="eyebrow">Your Tendency</div>
       <h1
         style={{

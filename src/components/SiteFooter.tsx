@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { ClockMark } from './SiteHeader';
 
 export default function SiteFooter() {
   return (
@@ -21,7 +20,13 @@ export default function SiteFooter() {
         >
           <div style={{ maxWidth: 320 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12 }}>
-              <ClockMark size={22} />
+              <img
+                src="/chrono-icon.png"
+                alt="Chrono"
+                width={22}
+                height={22}
+                style={{ width: 22, height: 22, borderRadius: '50%', objectFit: 'cover' }}
+              />
               <span style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem' }}>
                 Career TimeTravel
               </span>

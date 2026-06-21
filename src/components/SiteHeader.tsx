@@ -22,7 +22,19 @@ export default function SiteHeader() {
         }}
       >
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <ClockMark size={26} />
+          <img
+            src="/chrono-icon.png"
+            alt="Chrono"
+            width={32}
+            height={32}
+            style={{
+              width: 32,
+              height: 32,
+              borderRadius: '50%',
+              objectFit: 'cover',
+              border: '1px solid rgba(212,175,55,0.5)',
+            }}
+          />
           <span
             style={{
               fontFamily: 'var(--font-display)',
