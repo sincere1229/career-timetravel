@@ -16,6 +16,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '退職シミュレーターで生活可能月数を試算する',
     ctaHref: '/retirement-simulator',
     publishedAt: '2026-06-01',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '20万部突破。市場価値の測り方から退職・転職の判断軸まで学べる定番書',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'unemployment-insurance-basics',
@@ -31,6 +36,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '退職シミュレーターで生活可能月数を試算する',
     ctaHref: '/retirement-simulator',
     publishedAt: '2026-06-02',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '20万部突破。市場価値の測り方から退職・転職の判断軸まで学べる定番書',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'retirement-timing-signs',
@@ -46,6 +56,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '転職市場価値診断を試す',
     ctaHref: '/diagnosis/career-change',
     publishedAt: '2026-06-03',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '20万部突破。市場価値の測り方から退職・転職の判断軸まで学べる定番書',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'retirement-procedure-checklist',
@@ -60,6 +75,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '退職シミュレーターで生活可能月数を試算する',
     ctaHref: '/retirement-simulator',
     publishedAt: '2026-06-04',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '20万部突破。市場価値の測り方から退職・転職の判断軸まで学べる定番書',
+      asin: '4478105553',
+    },
   },
 
   // ===== 年収アップ =====
@@ -77,6 +97,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '年収アップ行動診断を試す',
     ctaHref: '/diagnosis/salary-up',
     publishedAt: '2026-06-05',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '自分の市場価値（マーケットバリュー）の測り方を学べる、年収アップの土台となる一冊',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'salary-negotiation-guide',
@@ -92,6 +117,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '転職市場価値診断を試す',
     ctaHref: '/diagnosis/career-change',
     publishedAt: '2026-06-06',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '自分の市場価値（マーケットバリュー）の測り方を学べる、年収アップの土台となる一冊',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'high-value-skills-2026',
@@ -107,6 +137,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '年収アップ行動診断を試す',
     ctaHref: '/diagnosis/salary-up',
     publishedAt: '2026-06-07',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '自分の市場価値（マーケットバリュー）の測り方を学べる、年収アップの土台となる一冊',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'salary-up-without-changing-job',
@@ -122,6 +157,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '副業適性診断を試す',
     ctaHref: '/diagnosis/side-hustle',
     publishedAt: '2026-06-08',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '自分の市場価値（マーケットバリュー）の測り方を学べる、年収アップの土台となる一冊',
+      asin: '4478105553',
+    },
   },
   {
     slug: 'why-effort-doesnt-pay',
@@ -136,6 +176,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '年収アップ行動診断を試す',
     ctaHref: '/diagnosis/salary-up',
     publishedAt: '2026-06-09',
+    recommendedBook: {
+      title: 'このまま今の会社にいていいのか?と一度でも思ったら読む 転職の思考法',
+      description: '自分の市場価値（マーケットバリュー）の測り方を学べる、年収アップの土台となる一冊',
+      asin: '4478105553',
+    },
   },
 
   // ===== 副業 =====
@@ -153,6 +198,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '副業適性診断を試す',
     ctaHref: '/diagnosis/side-hustle',
     publishedAt: '2026-06-10',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AIを使った副業の始め方を、初心者向けに具体的なロードマップで解説',
+      asin: '4046071877',
+    },
   },
   {
     slug: 'side-business-time-management',
@@ -168,6 +218,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '副業適性診断を試す',
     ctaHref: '/diagnosis/side-hustle',
     publishedAt: '2026-06-11',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AIを使った副業の始め方を、初心者向けに具体的なロードマップで解説',
+      asin: '4046071877',
+    },
   },
   {
     slug: 'side-business-tax-basics',
@@ -183,6 +238,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '副業適性診断を試す',
     ctaHref: '/diagnosis/side-hustle',
     publishedAt: '2026-06-12',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AIを使った副業の始め方を、初心者向けに具体的なロードマップで解説',
+      asin: '4046071877',
+    },
   },
   {
     slug: 'side-business-ai-tools',
@@ -197,6 +257,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: 'AI活用適性診断を試す',
     ctaHref: '/diagnosis/ai',
     publishedAt: '2026-06-13',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AIを使った副業の始め方を、初心者向けに具体的なロードマップで解説',
+      asin: '4046071877',
+    },
   },
   {
     slug: 'side-business-risk-types',
@@ -211,6 +276,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '副業適性診断を試す',
     ctaHref: '/diagnosis/side-hustle',
     publishedAt: '2026-06-14',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AIを使った副業の始め方を、初心者向けに具体的なロードマップで解説',
+      asin: '4046071877',
+    },
   },
 
   // ===== 就活 =====
@@ -228,6 +298,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '就活キャリア診断を試す',
     ctaHref: '/diagnosis/career',
     publishedAt: '2026-06-15',
+    recommendedBook: {
+      title: '新版 科学的な適職',
+      description: '科学的データに基づいた仕事選びの基準を学べる、自己分析・就活の実践書',
+      asin: '4295403741',
+    },
   },
   {
     slug: 'job-hunting-industry-research',
@@ -242,6 +317,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '就活キャリア診断を試す',
     ctaHref: '/diagnosis/career',
     publishedAt: '2026-06-16',
+    recommendedBook: {
+      title: '新版 科学的な適職',
+      description: '科学的データに基づいた仕事選びの基準を学べる、自己分析・就活の実践書',
+      asin: '4295403741',
+    },
   },
   {
     slug: 'job-hunting-interview-anxiety',
@@ -256,6 +336,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '就活キャリア診断を試す',
     ctaHref: '/diagnosis/career',
     publishedAt: '2026-06-17',
+    recommendedBook: {
+      title: '新版 科学的な適職',
+      description: '科学的データに基づいた仕事選びの基準を学べる、自己分析・就活の実践書',
+      asin: '4295403741',
+    },
   },
   {
     slug: 'job-hunting-axis-priority',
@@ -270,6 +355,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '就活キャリア診断を試す',
     ctaHref: '/diagnosis/career',
     publishedAt: '2026-06-18',
+    recommendedBook: {
+      title: '新版 科学的な適職',
+      description: '科学的データに基づいた仕事選びの基準を学べる、自己分析・就活の実践書',
+      asin: '4295403741',
+    },
   },
 
   // ===== 転職 =====
@@ -287,6 +377,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '転職市場価値診断を試す',
     ctaHref: '/diagnosis/career-change',
     publishedAt: '2026-06-19',
+    recommendedBook: {
+      title: '転職2.0 日本人のキャリアの新・ルール',
+      description: 'LinkedIn日本代表が説く、市場価値を最大化する新時代の転職戦略',
+      asin: '4815608032',
+    },
   },
   {
     slug: 'career-change-agent-how-to-use',
@@ -301,6 +396,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '転職市場価値診断を試す',
     ctaHref: '/diagnosis/career-change',
     publishedAt: '2026-06-20',
+    recommendedBook: {
+      title: '転職2.0 日本人のキャリアの新・ルール',
+      description: 'LinkedIn日本代表が説く、市場価値を最大化する新時代の転職戦略',
+      asin: '4815608032',
+    },
   },
   {
     slug: 'career-change-30s-guide',
@@ -315,6 +415,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '転職市場価値診断を試す',
     ctaHref: '/diagnosis/career-change',
     publishedAt: '2026-06-21',
+    recommendedBook: {
+      title: '転職2.0 日本人のキャリアの新・ルール',
+      description: 'LinkedIn日本代表が説く、市場価値を最大化する新時代の転職戦略',
+      asin: '4815608032',
+    },
   },
   {
     slug: 'career-change-timing',
@@ -329,6 +434,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: '転職市場価値診断を試す',
     ctaHref: '/diagnosis/career-change',
     publishedAt: '2026-06-22',
+    recommendedBook: {
+      title: '転職2.0 日本人のキャリアの新・ルール',
+      description: 'LinkedIn日本代表が説く、市場価値を最大化する新時代の転職戦略',
+      asin: '4815608032',
+    },
   },
 
   // ===== AI活用 =====
@@ -345,6 +455,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: 'AI活用適性診断を試す',
     ctaHref: '/diagnosis/ai',
     publishedAt: '2026-06-23',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AI初心者でも今日から実践できる、AI活用の基礎と収益化のノウハウ',
+      asin: '4046071877',
+    },
   },
   {
     slug: 'ai-automation-for-office-work',
@@ -359,6 +474,11 @@ export const columns: ColumnPost[] = [
     ctaLabel: 'AI活用適性診断を試す',
     ctaHref: '/diagnosis/ai',
     publishedAt: '2026-06-24',
+    recommendedBook: {
+      title: '2ヶ月で月30万円を実現する 超初心者でも稼げるAI活用法',
+      description: 'AI初心者でも今日から実践できる、AI活用の基礎と収益化のノウハウ',
+      asin: '4046071877',
+    },
   },
 ];
 

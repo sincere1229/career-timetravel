@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { columns, getColumnBySlug } from '@/lib/columns';
+import { buildAmazonUrl } from '@/lib/amazon';
 
 export function generateStaticParams() {
   return columns.map((c) => ({ slug: c.slug }));
@@ -50,6 +51,60 @@ export default function ColumnDetailPage({ params }: { params: { slug: string } 
           </p>
         ))}
       </div>
+
+      {column.recommendedBook && (
+        <div
+          className="glass-card card-pad"
+          style={{
+            marginTop: 36,
+            marginBottom: 24,
+            borderColor: 'rgba(212,175,55,0.3)',
+          }}
+        >
+          <p style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--chrono-gold)', marginBottom: 14 }}>
+            📚 おすすめの本（Amazon）
+          </p>
+          <a
+            href={buildAmazonUrl(column.recommendedBook.asin)}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 14,
+              padding: 14,
+              background: 'rgba(255,255,255,0.03)',
+              borderRadius: 10,
+              border: '1px solid rgba(212,175,55,0.25)',
+              textDecoration: 'none',
+            }}
+          >
+            <span style={{ fontSize: 26, flexShrink: 0 }}>📖</span>
+            <div style={{ flex: 1 }}>
+              <p style={{ fontSize: '0.92rem', fontWeight: 600, color: 'var(--chrono-white)', marginBottom: 4 }}>
+                {column.recommendedBook.title}
+              </p>
+              <p style={{ fontSize: '0.8rem', color: 'var(--chrono-text-dim)', lineHeight: 1.6 }}>
+                {column.recommendedBook.description}
+              </p>
+            </div>
+            <span
+              style={{
+                fontSize: '0.68rem',
+                padding: '3px 10px',
+                borderRadius: 999,
+                background: 'rgba(212,175,55,0.15)',
+                color: 'var(--chrono-gold)',
+                border: '1px solid rgba(212,175,55,0.3)',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+              }}
+            >
+              Amazon
+            </span>
+          </a>
+        </div>
+      )}
 
       {/* 必須CTA */}
       <div

@@ -35,6 +35,12 @@ export interface DiagnosisMeta {
   accentIcon: string;
 }
 
+export interface RecommendedBook {
+  title: string;
+  description: string;
+  asin: string; // Amazon ASIN
+}
+
 export interface ColumnPost {
   slug: string;
   title: string;
@@ -44,6 +50,7 @@ export interface ColumnPost {
   ctaLabel: string;
   ctaHref: string;
   publishedAt: string;
+  recommendedBook?: RecommendedBook;
 }
 
 export interface ServiceCategory {
