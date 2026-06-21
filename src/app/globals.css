@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+JP:wght@500;700&family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --chrono-navy-deep: #060d1f;
+  --chrono-navy: #0d1b2a;
+  --chrono-blue: #123b6d;
+  --chrono-ice: #38a1d6;
+  --chrono-silver: #c0d6f2;
+  --chrono-gold: #d4af37;
+  --chrono-white: #e8f1ff;
+  --chrono-text-dim: #93a8c9;
+
+  --font-display: 'Cormorant Garamond', 'Noto Serif JP', serif;
+  --font-heading-jp: 'Noto Serif JP', serif;
+  --font-body: 'Inter', 'Noto Sans JP', sans-serif;
+
+  --radius-card: 14px;
+  --ease-chrono: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--chrono-navy-deep);
+  color: var(--chrono-white);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--chrono-gold);
+  color: var(--chrono-navy-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--chrono-gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 18px;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--chrono-ice);
+  font-size: 0.82rem;
+}
+
+.gold-rule {
+  width: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--chrono-gold), transparent);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-chrono), box-shadow 0.25s var(--ease-chrono), background 0.25s;
+  border: 1px solid transparent;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--chrono-gold), #b8902c);
+  color: var(--chrono-navy-deep);
+  box-shadow: 0 8px 24px -8px rgba(212, 175, 55, 0.5);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 28px -8px rgba(212, 175, 55, 0.65);
+}
+
+.btn-ghost {
+  background: rgba(192, 214, 242, 0.06);
+  border-color: rgba(192, 214, 242, 0.3);
+  color: var(--chrono-silver);
+}
+
+.btn-ghost:hover {
+  background: rgba(192, 214, 242, 0.12);
+  border-color: var(--chrono-ice);
+}
+
+.glass-card {
+  background: linear-gradient(165deg, rgba(18, 59, 109, 0.35), rgba(13, 27, 42, 0.55));
+  border: 1px solid rgba(192, 214, 242, 0.14);
+  border-radius: var(--radius-card);
+  backdrop-filter: blur(6px);
+}
+
+.nav-links {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .nav-links a:not(.btn) {
+    display: none;
+  }
+}
+
+.section {
+  padding: 88px 0;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 56px 0;
+  }
+}
+
+.section-title {
+  font-family: var(--font-heading-jp);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--chrono-white);
+  margin: 10px 0 14px;
+}
+
+.section-lead {
+  color: var(--chrono-text-dim);
+  font-size: 1rem;
+  max-width: 640px;
+  line-height: 1.8;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card-pad {
+  padding: 28px 24px;
+}
+
+.spin-slow {
+  animation: spin 120s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow-reverse {
+  animation: spin-rev 90s linear infinite;
+}
+
+@keyframes spin-rev {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.fade-up {
+  animation: fadeUp 0.9s var(--ease-chrono) both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
