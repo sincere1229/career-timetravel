@@ -3,14 +3,40 @@ import { buildA8Url } from './a8BannerPool';
 
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: 'job-agent',
-    title: '転職エージェント',
-    description: '年収交渉や非公開求人の紹介など、プロのサポートを受けながら転職活動を進めたい方向け。',
+    id: 'job-agent-general',
+    title: '総合・ハイクラス転職エージェント',
+    description: '幅広い求人から選びたい人、年収アップやマネジメント層への転職を狙う人向け。',
     items: [
-      { name: '総合型転職エージェント', description: '幅広い業界・職種をカバーする大手エージェント', href: 'https://townwork.net/', comingSoon: false },
-      { name: 'ハイクラス向け転職エージェント', description: '年収アップ・管理職転職に強いエージェント', href: 'https://doda.jp/', comingSoon: false },
-      { name: '第二新卒・未経験向けエージェント', description: '未経験挑戦型・若手層向けの求人に強いエージェント', href: 'https://www.mynavi-agent.jp/', comingSoon: false },
+      { name: 'リクルートエージェント', description: '業界最大級の求人数。まず選択肢を広く把握したい人に', href: 'https://www.r-agent.com/', comingSoon: false },
+      { name: 'dodaエージェントサービス', description: 'スカウトとエージェントを併用できる総合型サービス', href: 'https://doda.jp/', comingSoon: false },
+      { name: 'doda X', description: '年収600万円以上のハイクラス求人に特化、ヘッドハンターからのスカウトも', href: 'https://doda-x.jp/', comingSoon: false },
+      { name: 'JAC Recruitment', description: '外資系・グローバル企業・管理職ポジションに強い専門特化型', href: 'https://www.jac-recruitment.jp/', comingSoon: false },
+      { name: 'パソナキャリア', description: '丁寧なサポートに定評、女性やUIターン転職にも対応', href: 'https://www.pasonacareer.jp/', comingSoon: false },
+      { name: 'フォルトナ', description: 'コンサル・IT・スタートアップなどハイクラス領域の伴走型支援', href: 'https://fortna.co.jp/', comingSoon: false },
+      { name: 'JAC Executive', description: '国内外の経営層ポジションに強いエグゼクティブ特化サービス', href: 'https://www.jac-recruitment.jp/', comingSoon: false },
+    ],
+  },
+  {
+    id: 'job-agent-it',
+    title: 'IT・エンジニア特化エージェント',
+    description: 'エンジニア・クリエイター・IT職種での転職、専門性を活かしたキャリアアップを目指す人向け。',
+    items: [
+      { name: 'ギークリー', description: 'IT・Web・ゲーム業界特化、4万件以上の求人を保有', href: 'https://www.geekly.co.jp/', comingSoon: false },
+      { name: 'レバテックキャリア', description: 'ITエンジニア・クリエイター特化、業界トップクラスの実績', href: 'https://career.levtech.jp/', comingSoon: false },
+      { name: 'type転職エージェントIT', description: '首都圏のITエンジニア専用、年収交渉サポートも手厚い', href: 'https://type.career-agent.jp/service/it.html', comingSoon: false },
+      { name: 'ユニゾンキャリア', description: '未経験からITエンジニアを目指す20代〜30代前半に強い', href: 'https://unison-career.jp/', comingSoon: false },
       { name: 'マスメディアン', description: 'マーケティング・クリエイティブ職特化の人材紹介サービス', href: buildA8Url('4B5Q84+B7NZ8Q+3JN0+6WMM9'), comingSoon: false },
+    ],
+  },
+  {
+    id: 'job-agent-young',
+    title: '若手・第二新卒・新卒向けエージェント',
+    description: '初めての転職や就職活動で、手厚い伴走サポートを受けたい人向け。',
+    items: [
+      { name: 'マイナビエージェント', description: '20〜30代の若手・第二新卒支援に強い総合型', href: 'https://mynavi-agent.jp/', comingSoon: false },
+      { name: '第二新卒エージェントneo', description: '第二新卒・既卒・フリーター向け、未経験OK求人が豊富', href: 'https://www.daini-agent.jp/', comingSoon: false },
+      { name: '就職エージェントneo', description: '新卒学生向け、自己分析からES添削・面接対策まで伴走', href: 'https://www.s-agent.jp/', comingSoon: false },
+      { name: 'キャリアチケット就職エージェント', description: '社風や働きやすさ重視の学生向けマッチング', href: 'https://careerticket.jp/', comingSoon: false },
       { name: 'ファルマスタッフ', description: '薬剤師専門の求人・転職サイト', href: buildA8Url('4B5Q84+ATDKQ2+276A+67Z9T'), comingSoon: false },
     ],
   },
