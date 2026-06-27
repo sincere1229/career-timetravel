@@ -159,6 +159,7 @@ export const careerStartV2: DiagnosisV2Config = {
   services: [
     {
       id: 'caricen',
+      matchProfile: { guidance: { min: 0.5 } },
       name: 'キャリセン就活エージェント',
       tagline: '内定ゼロ・出遅れでも諦めないで。就活を立て直す個別サポートの無料相談',
       emoji: '🎓',
@@ -172,6 +173,7 @@ export const careerStartV2: DiagnosisV2Config = {
     },
     {
       id: 'kimisuka',
+      matchProfile: { selfPR: { max: 0 } },
       name: 'キミスカ（就活エージェント）',
       tagline: 'スカウト型就活で、自分に合う企業から声をかけてもらいたい人へ',
       emoji: '📬',
@@ -185,6 +187,7 @@ export const careerStartV2: DiagnosisV2Config = {
     },
     {
       id: 'transfer-agent-navi',
+      matchProfile: { guidance: { min: 0 } },
       name: '転職AGENT Navi',
       tagline: '自分に合った転職エージェントを無料で紹介してもらいたい人へ',
       emoji: '🗺️',
@@ -198,6 +201,7 @@ export const careerStartV2: DiagnosisV2Config = {
     },
     {
       id: 'caripato',
+      matchProfile: { guidance: { min: 0.3 } },
       name: 'キャリパト（キャリアコーチング）',
       tagline: '2ヶ月で選択できる自分に。キャリア戦略を一緒に考えてほしい人へ',
       emoji: '🎯',
@@ -211,6 +215,7 @@ export const careerStartV2: DiagnosisV2Config = {
     },
     {
       id: 'spi-agent',
+      matchProfile: { stability: { min: 0 } },
       name: 'SPI転職エージェント',
       tagline: '転職のプロによるパーソナルサポート。完全無料で転職活動を支援したい人へ',
       emoji: '🤝',
