@@ -1,3 +1,5 @@
+export type TraitKey = string;
+
 export interface DiagnosisV2Config {
   id: string;
   title: string;
@@ -6,7 +8,7 @@ export interface DiagnosisV2Config {
   characterName?: string;
   characterImage?: string;
   questions: DiagnosisV2Question[];
-  services: DiagnosisV2Service[];
+  services: ServiceCandidate[];
   traits: TraitMeta[];
 }
 
@@ -34,13 +36,12 @@ export type DiagnosisV2Question =
       }[];
     };
 
-export interface DiagnosisV2Service {
+export interface ServiceCandidate {
   id: string;
   name: string;
   tagline: string;
   emoji: string;
   matchProfile: Record<string, { min?: number; max?: number }>;
-  matchScore?: number;
   href: string | null;
   bannerImage?: string;
   bannerWidth?: number;
@@ -49,6 +50,9 @@ export interface DiagnosisV2Service {
   isAffiliate: boolean;
   comingSoon: boolean;
 }
+
+// DiagnosisV2Service は ServiceCandidate の別名（互換性のため）
+export type DiagnosisV2Service = ServiceCandidate;
 
 export interface TraitMeta {
   key: string;
