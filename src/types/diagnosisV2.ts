@@ -14,17 +14,24 @@ export type DiagnosisV2Question =
   | {
       id: string;
       type: 'slider';
-      text: string;
+      prompt: string;
       trait: string;
       direction: 1 | -1;
+      lowAnchor?: string;
+      highAnchor?: string;
     }
   | {
       id: string;
       type: 'choice';
-      text: string;
-      trait: string;
+      prompt: string;
+      trait?: string;
       direction?: 1 | -1;
-      options: { label: string; value: number }[];
+      options: {
+        label: string;
+        sublabel?: string;
+        effects?: Record<string, number>;
+        value?: number;
+      }[];
     };
 
 export interface DiagnosisV2Service {
