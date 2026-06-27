@@ -10,14 +10,22 @@ export interface DiagnosisV2Config {
   traits: Record<string, TraitMeta>;
 }
 
-export interface DiagnosisV2Question {
-  id: string;
-  type: 'slider' | 'choice';
-  text: string;
-  trait: string;
-  direction?: 1 | -1;
-  options?: { label: string; value: number }[];
-}
+export type DiagnosisV2Question =
+  | {
+      id: string;
+      type: 'slider';
+      text: string;
+      trait: string;
+      direction: 1 | -1;
+    }
+  | {
+      id: string;
+      type: 'choice';
+      text: string;
+      trait: string;
+      direction?: 1 | -1;
+      options: { label: string; value: number }[];
+    };
 
 export interface DiagnosisV2Service {
   id: string;
