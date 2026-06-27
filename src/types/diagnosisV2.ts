@@ -7,7 +7,7 @@ export interface DiagnosisV2Config {
   characterImage?: string;
   questions: DiagnosisV2Question[];
   services: DiagnosisV2Service[];
-  traits: Record<string, TraitMeta>;
+  traits: TraitMeta[];
 }
 
 export type DiagnosisV2Question =
@@ -40,6 +40,7 @@ export interface DiagnosisV2Service {
   tagline: string;
   emoji: string;
   matchProfile: Record<string, { min?: number; max?: number }>;
+  matchScore?: number;
   href: string | null;
   bannerImage?: string;
   bannerWidth?: number;
@@ -50,6 +51,10 @@ export interface DiagnosisV2Service {
 }
 
 export interface TraitMeta {
+  key: string;
   label: string;
+  lowLabel?: string;
+  highLabel?: string;
+  color?: string;
   description?: string;
 }
