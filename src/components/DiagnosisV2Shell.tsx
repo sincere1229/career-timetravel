@@ -361,43 +361,6 @@ function ProgressBar({ progress, current, total }: { progress: number; current: 
             transition: 'width 0.4s var(--ease-chrono)',
           }}
         />
-      {/* LINE導線 */}
-      <div style={{ marginTop: 32 }}>
-        <LineCTA
-          source="result"
-          variant="full"
-          label="Chronoに相談する"
-        />
-      </div>
-
-      {/* AIチャット相談CTA */}
-      <div style={{
-        marginTop: 16,
-        background: 'rgba(100,160,255,0.06)',
-        border: '1px solid rgba(100,160,255,0.2)',
-        borderRadius: 14,
-        padding: '18px 20px',
-        textAlign: 'center',
-      }}>
-        <p style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--chrono-ice)', marginBottom: 6 }}>
-          🤖 AIキャリア相談
-        </p>
-        <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.55)', marginBottom: 14, lineHeight: 1.6 }}>
-          転職・副業・AI活用について、Chronoに直接相談できます
-        </p>
-        <a href="/chat" style={{
-          display: 'inline-block',
-          background: 'linear-gradient(135deg, #1a3a6a, #0d2040)',
-          border: '1px solid rgba(100,160,255,0.3)',
-          color: 'var(--chrono-ice)',
-          borderRadius: 10,
-          padding: '11px 26px',
-          fontSize: '0.85rem',
-          fontWeight: 700,
-          textDecoration: 'none',
-        }}>
-          Chronoに相談する →
-        </a>
       </div>
     </div>
   );
