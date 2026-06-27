@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { columns, getColumnBySlug } from '@/lib/columns';
+import LineCTA from '@/components/LineCTA';
 import { buildAmazonUrl } from '@/lib/amazon';
 
 export function generateStaticParams() {
@@ -141,6 +142,17 @@ export default function ColumnDetailPage({ params }: { params: { slug: string } 
           ))}
         </div>
       </div>
+
+      {/* コラム中盤LINE導線 */}
+      <div style={{ margin: '40px 0 24px' }}>
+        <LineCTA
+          source="article"
+          article={column.slug}
+          variant="banner"
+          label="LINEで無料相談する"
+        />
+      </div>
+
     </main>
   );
 }
