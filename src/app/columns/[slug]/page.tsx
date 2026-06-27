@@ -143,8 +143,31 @@ export default function ColumnDetailPage({ params }: { params: { slug: string } 
         </div>
       </div>
 
-      {/* コラム中盤LINE導線 */}
-      <div style={{ margin: '40px 0 24px' }}>
+      {/* 診断誘導CTA */}
+      <div style={{
+        marginTop: 32,
+        background: 'linear-gradient(135deg, rgba(100,160,255,0.06), rgba(212,175,55,0.04))',
+        border: '1px solid rgba(212,175,55,0.2)',
+        borderRadius: 14,
+        padding: '20px',
+        textAlign: 'center',
+      }}>
+        <p style={{ fontSize: '0.7rem', color: 'var(--chrono-gold)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: 8 }}>
+          CHRONO DIAGNOSIS
+        </p>
+        <p style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--chrono-white)', marginBottom: 6, lineHeight: 1.5 }}>
+          あなたのキャリア傾向を<br />無料で診断してみませんか？
+        </p>
+        <p style={{ fontSize: '0.8rem', color: 'var(--chrono-text-dim)', marginBottom: 16, lineHeight: 1.6 }}>
+          診断結果に応じた、あなた専用のコラム・サービスを提案します
+        </p>
+        <Link href="/diagnosis/salary-up" className="btn btn-primary" style={{ fontSize: '0.85rem' }}>
+          無料で診断する →
+        </Link>
+      </div>
+
+      {/* LINE導線 */}
+      <div style={{ marginTop: 24 }}>
         <LineCTA
           source="article"
           article={column.slug}
