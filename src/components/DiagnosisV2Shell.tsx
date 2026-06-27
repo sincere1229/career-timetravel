@@ -528,6 +528,15 @@ function ResultScreen({ config, scores, diagnosisId }: { config: DiagnosisV2Conf
       <div style={{ marginTop: 32 }}>
         <LineCTA
           source="result"
+          type={
+            diagnosisId === 'salary-up'     ? 'income' :
+            diagnosisId === 'side-hustle'   ? 'side_hustle' :
+            diagnosisId === 'ai'            ? 'ai' :
+            diagnosisId === 'career'        ? 'career' :
+            diagnosisId === 'career-change' ? 'job_change' :
+            undefined
+          }
+          result={diagnosisId}
           variant="full"
           label="Chronoに相談する"
         />
