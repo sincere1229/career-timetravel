@@ -159,6 +159,7 @@ export const aiAptitudeV2: DiagnosisV2Config = {
   services: [
     {
       id: 'fast-campus',
+      matchProfile: { learning: { min: 0 } },
       name: 'Fast campus（スキルアップ）',
       tagline: 'DX・データ分析・AIスキルを体系的に学んでキャリアアップしたい人へ',
       emoji: '🚀',
@@ -172,6 +173,7 @@ export const aiAptitudeV2: DiagnosisV2Config = {
     },
     {
       id: 'newma',
+      matchProfile: { income: { min: 0.3 }, learning: { min: 0 } },
       name: 'NewMA（コンサル転職）',
       tagline: 'DX・戦略・AIコンサル転職を目指す人へ。専門特化型の転職支援',
       emoji: '💡',
@@ -185,6 +187,7 @@ export const aiAptitudeV2: DiagnosisV2Config = {
     },
     {
       id: 'caripato',
+      matchProfile: { learning: { min: 0 } },
       name: 'キャリパト（キャリアコーチング）',
       tagline: '2ヶ月で選択できる自分に。キャリア戦略を一緒に考えてほしい人へ',
       emoji: '🎯',
@@ -198,6 +201,7 @@ export const aiAptitudeV2: DiagnosisV2Config = {
     },
     {
       id: 'moneyforward-kaigyou',
+      matchProfile: { risk: { max: 0 } },
       name: 'マネーフォワード クラウド開業届',
       tagline: '開業届・青色申告承認申請書を無料でかんたんに作成したい人へ',
       emoji: '📋',
@@ -211,6 +215,7 @@ export const aiAptitudeV2: DiagnosisV2Config = {
     },
     {
       id: 'lec',
+      matchProfile: { learning: { min: 0.3 } },
       name: 'LEC東京リーガルマインド',
       tagline: '宅建・行政書士・社労士など国家資格取得でキャリアを変えたい人へ',
       emoji: '📚',
