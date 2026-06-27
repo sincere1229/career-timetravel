@@ -159,6 +159,7 @@ export const salaryUpV2: DiagnosisV2Config = {
   services: [
     {
       id: 'neko-agent',
+      matchProfile: { speed: { min: 0 }, support: { min: 0 } },
       name: 'ネコエージェント（LINE転職相談）',
       tagline: 'LINEで気軽に相談しながら、自分のペースで転職活動を進めたい人へ',
       emoji: '🐱',
@@ -172,6 +173,7 @@ export const salaryUpV2: DiagnosisV2Config = {
     },
     {
       id: 'spi-agent',
+      matchProfile: { income: { min: 0 }, speed: { min: 0 } },
       name: 'SPI転職エージェント',
       tagline: '転職のプロによるパーソナルサポート。完全無料で転職活動を支援したい人へ',
       emoji: '🤝',
@@ -185,6 +187,7 @@ export const salaryUpV2: DiagnosisV2Config = {
     },
     {
       id: 'transfer-agent-navi',
+      matchProfile: { speed: { min: 0 } },
       name: '転職AGENT Navi',
       tagline: '自分に合った転職エージェントを無料で紹介してもらいたい人へ',
       emoji: '🗺️',
@@ -198,6 +201,7 @@ export const salaryUpV2: DiagnosisV2Config = {
     },
     {
       id: 'remoful',
+      matchProfile: { risk: { max: 0 } },
       name: 'Remoful（リモートワーク転職）',
       tagline: 'フルリモートで働きたい・在宅ワークに特化した求人を探したい人へ',
       emoji: '💻',
@@ -211,6 +215,7 @@ export const salaryUpV2: DiagnosisV2Config = {
     },
     {
       id: 'massmediann',
+      matchProfile: { selfAwareness: { min: 0 } },
       name: 'マスメディアン（転職）',
       tagline: 'マーケ・広告・IT業界への転職に特化したエージェントを使いたい人へ',
       emoji: '📣',
