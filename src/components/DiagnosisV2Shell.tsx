@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import type { DiagnosisV2Config } from '@/types/diagnosisV2';
 import LineCTA from '@/components/LineCTA';
+import RelatedColumns from '@/components/RelatedColumns';
 import {
   initTraitScores,
   applySliderAnswer,
@@ -42,7 +43,7 @@ export default function DiagnosisV2Shell({ config }: { config: DiagnosisV2Config
   }
 
   if (isResult) {
-    return <ResultScreen config={config} scores={scores} />;
+    return <ResultScreen config={config} scores={scores} diagnosisId={config.id} />;
   }
 
   const q = config.questions[step];
@@ -329,7 +330,7 @@ function ProgressBar({ progress, current, total }: { progress: number; current: 
   );
 }
 
-function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: TraitScores }) {
+function ResultScreen({ config, scores, diagnosisId }: { config: DiagnosisV2Config; scores: TraitScores; diagnosisId: string }) {
   const ranked = rankServices(config, scores);
   const top = ranked.slice(0, 3);
 
@@ -520,6 +521,9 @@ function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: T
           トップへ戻る
         </Link>
       </div>
+      {/* 関連コラム */}
+      <RelatedColumns diagnosisId={diagnosisId} maxItems={3} />
+
       {/* LINE導線 */}
       <div style={{ marginTop: 32 }}>
         <LineCTA
