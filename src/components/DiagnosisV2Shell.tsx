@@ -200,15 +200,12 @@ export default function DiagnosisV2Shell({ config }: { config: DiagnosisV2Config
   );
 }
 
-function LivePreview({
-  config,
-  scores,
-  answeredCount,
-}: {
+function LivePreview(props: {
   config: DiagnosisV2Config;
   scores: TraitScores;
   answeredCount: number;
 }) {
+  const { config, scores, answeredCount } = props;
   return (
     <div className="glass-card card-pad" style={{ position: 'sticky', top: 90 }}>
       <div style={{ fontSize: '0.74rem', color: 'var(--chrono-gold)', letterSpacing: '0.06em', marginBottom: 6 }}>
@@ -302,7 +299,8 @@ function LivePreview({
   );
 }
 
-function IntroScreen({ config, onStart }: { config: DiagnosisV2Config; onStart: () => void }) {
+function IntroScreen(props: { config: DiagnosisV2Config; onStart: () => void }) {
+  const { config, onStart } = props;
   return (
     <div className="container section" style={{ maxWidth: 640, textAlign: 'center' }}>
       <div className="eyebrow" style={{ justifyContent: 'center', display: 'flex' }}>
@@ -335,7 +333,8 @@ function IntroScreen({ config, onStart }: { config: DiagnosisV2Config; onStart: 
   );
 }
 
-function ProgressBar({ progress, current, total }: { progress: number; current: number; total: number }) {
+function ProgressBar(props: { progress: number; current: number; total: number }) {
+  const { progress, current, total } = props;
   return (
     <div>
       <div
@@ -366,7 +365,8 @@ function ProgressBar({ progress, current, total }: { progress: number; current: 
   );
 }
 
-function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: TraitScores }) {
+function ResultScreen(props: { config: DiagnosisV2Config; scores: TraitScores }) {
+  const { config, scores } = props;
   const ranked = rankServices(config, scores);
   const top = ranked.slice(0, 3);
 
