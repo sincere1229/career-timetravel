@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LineCTA from '@/components/LineCTA';
 import ClockDial from '@/components/ClockDial';
 import { diagnosisList, getDiagnosisUrl } from '@/lib/diagnosisMeta';
 import { columns } from '@/lib/columns';
@@ -179,6 +180,15 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* LINE導線 */}
+      <section style={{ padding: '48px 20px 0', maxWidth: 600, margin: '0 auto' }}>
+        <LineCTA
+          source="top"
+          variant="full"
+          label="LINEでキャリアロードマップを受け取る"
+        />
       </section>
 
       {/* 4. コラム導線 */}
