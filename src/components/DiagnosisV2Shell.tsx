@@ -593,6 +593,8 @@ function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: T
         <Link href="/" className="btn btn-ghost">
           トップへ戻る
         </Link>
+      </div>
+
       {/* LINE導線 */}
       <div style={{ marginTop: 32 }}>
         <LineCTA
