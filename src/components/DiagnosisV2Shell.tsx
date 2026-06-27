@@ -24,14 +24,14 @@ export default function DiagnosisV2Shell({ config }: { config: DiagnosisV2Config
   function handleSliderSubmit() {
     const q = config.questions[step];
     if (q.type !== 'slider') return;
-    const next = applySliderAnswer(scores, q.trait, q.direction, sliderValue);
+    const next = applySliderAnswer(scores, q.trait as string, q.direction as (1 | -1), sliderValue);
     setScores(next);
     setSliderValue(3);
     setStep((s) => s + 1);
   }
 
   function handleChoiceSubmit(effects: Partial<Record<string, number>>) {
-    const next = applyChoiceAnswer(scores, effects);
+    const next = applyChoiceAnswer(scores, effects as Partial<Record<string, number>>);
     setScores(next);
     setTimeout(() => setStep((s) => s + 1), 150);
   }
@@ -132,7 +132,7 @@ export default function DiagnosisV2Shell({ config }: { config: DiagnosisV2Config
               {q.options.map((opt, idx) => (
                 <button
                   key={idx}
-                  onClick={() => handleChoiceSubmit(opt.effects)}
+                  onClick={() => handleChoiceSubmit(opt.effects ?? {})}
                   className="answer-option"
                   style={{
                     textAlign: 'left',
