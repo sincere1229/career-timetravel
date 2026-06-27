@@ -464,9 +464,14 @@ function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: T
 
           if (s.href && !s.comingSoon) {
             return (
-              <a key={s.id} href={s.href} target="_blank" rel="noopener noreferrer" className="glass-card card-pad" style={cardStyle}>
-                {cardContent}
-              </a>
+              <>
+                <a key={s.id} href={s.href} target="_blank" rel="nofollow noopener noreferrer" className="glass-card card-pad" style={cardStyle}>
+                  {cardContent}
+                </a>
+                {s.impUrl && (
+                  <img src={s.impUrl} width={1} height={1} style={{ border: 'none', display: 'block' }} loading="lazy" alt="" />
+                )}
+              </>
             );
           }
 
