@@ -200,12 +200,15 @@ export default function DiagnosisV2Shell({ config }: { config: DiagnosisV2Config
   );
 }
 
-function LivePreview(props: {
+function LivePreview({
+  config,
+  scores,
+  answeredCount,
+}: {
   config: DiagnosisV2Config;
   scores: TraitScores;
   answeredCount: number;
 }) {
-  const { config, scores, answeredCount } = props;
   return (
     <div className="glass-card card-pad" style={{ position: 'sticky', top: 90 }}>
       <div style={{ fontSize: '0.74rem', color: 'var(--chrono-gold)', letterSpacing: '0.06em', marginBottom: 6 }}>
@@ -257,50 +260,12 @@ function LivePreview(props: {
             </div>
           );
         })}
-      {/* LINE導線 */}
-      <div style={{ marginTop: 32 }}>
-        <LineCTA
-          source="result"
-          variant="full"
-          label="Chronoに相談する"
-        />
-      </div>
-
-      {/* AIチャット相談CTA */}
-      <div style={{
-        marginTop: 16,
-        background: 'rgba(100,160,255,0.06)',
-        border: '1px solid rgba(100,160,255,0.2)',
-        borderRadius: 14,
-        padding: '18px 20px',
-        textAlign: 'center',
-      }}>
-        <p style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--chrono-ice)', marginBottom: 6 }}>
-          🤖 AIキャリア相談
-        </p>
-        <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.55)', marginBottom: 14, lineHeight: 1.6 }}>
-          転職・副業・AI活用について、Chronoに直接相談できます
-        </p>
-        <a href="/chat" style={{
-          display: 'inline-block',
-          background: 'linear-gradient(135deg, #1a3a6a, #0d2040)',
-          border: '1px solid rgba(100,160,255,0.3)',
-          color: 'var(--chrono-ice)',
-          borderRadius: 10,
-          padding: '11px 26px',
-          fontSize: '0.85rem',
-          fontWeight: 700,
-          textDecoration: 'none',
-        }}>
-          Chronoに相談する →
-        </a>
       </div>
     </div>
   );
 }
 
-function IntroScreen(props: { config: DiagnosisV2Config; onStart: () => void }) {
-  const { config, onStart } = props;
+function IntroScreen({ config, onStart }: { config: DiagnosisV2Config; onStart: () => void }) {
   return (
     <div className="container section" style={{ maxWidth: 640, textAlign: 'center' }}>
       <div className="eyebrow" style={{ justifyContent: 'center', display: 'flex' }}>
@@ -333,8 +298,7 @@ function IntroScreen(props: { config: DiagnosisV2Config; onStart: () => void }) 
   );
 }
 
-function ProgressBar(props: { progress: number; current: number; total: number }) {
-  const { progress, current, total } = props;
+function ProgressBar({ progress, current, total }: { progress: number; current: number; total: number }) {
   return (
     <div>
       <div
@@ -365,8 +329,7 @@ function ProgressBar(props: { progress: number; current: number; total: number }
   );
 }
 
-function ResultScreen(props: { config: DiagnosisV2Config; scores: TraitScores }) {
-  const { config, scores } = props;
+function ResultScreen({ config, scores }: { config: DiagnosisV2Config; scores: TraitScores }) {
   const ranked = rankServices(config, scores);
   const top = ranked.slice(0, 3);
 
@@ -557,7 +520,6 @@ function ResultScreen(props: { config: DiagnosisV2Config; scores: TraitScores })
           トップへ戻る
         </Link>
       </div>
-
       {/* LINE導線 */}
       <div style={{ marginTop: 32 }}>
         <LineCTA
