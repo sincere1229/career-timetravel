@@ -191,6 +191,45 @@ export default function HomePage() {
         />
       </section>
 
+      {/* チャット相談導線 */}
+      <section style={{ padding: '0 20px 0', maxWidth: 600, margin: '0 auto' }}>
+        <div style={{
+          background: 'rgba(13,32,64,0.6)',
+          border: '1px solid rgba(212,175,55,0.2)',
+          borderRadius: 14,
+          padding: '20px',
+          textAlign: 'center',
+        }}>
+          <div style={{ fontSize: '2rem', marginBottom: 10 }}>🕐</div>
+          <p style={{ fontSize: '0.72rem', color: 'var(--chrono-gold)', fontWeight: 700, letterSpacing: '0.08em', marginBottom: 8 }}>
+            AI CAREER NAVIGATOR
+          </p>
+          <p style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--chrono-white)', marginBottom: 8, lineHeight: 1.4 }}>
+            Chronoに相談する
+          </p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--chrono-text-dim)', marginBottom: 16, lineHeight: 1.6 }}>
+            転職・副業・AI活用・キャリアの悩みを<br />Chronoが整理します
+          </p>
+          <Link
+            href="/chat"
+            style={{
+              display: 'inline-block',
+              background: 'linear-gradient(135deg, #1a3a6a, #0d2040)',
+              border: '1px solid rgba(212,175,55,0.3)',
+              color: 'var(--chrono-gold)',
+              borderRadius: 10,
+              padding: '12px 28px',
+              fontSize: '0.88rem',
+              fontWeight: 700,
+              textDecoration: 'none',
+              letterSpacing: '0.03em',
+            }}
+          >
+            AIキャリア相談を始める →
+          </Link>
+        </div>
+      </section>
+
       {/* 4. コラム導線 */}
       <section className="section">
         <div className="container">
