@@ -159,6 +159,7 @@ export const sideHustleV2: DiagnosisV2Config = {
   services: [
     {
       id: 'nawabari',
+      matchProfile: { independence: { min: 0 }, risk: { max: 0.3 } },
       name: 'NAWABARI（バーチャルオフィス）',
       tagline: '低コストで法人登記・ビジネス住所を確保してフリーランス・起業したい人へ',
       emoji: '🏢',
@@ -172,6 +173,7 @@ export const sideHustleV2: DiagnosisV2Config = {
     },
     {
       id: 'paytoner',
+      matchProfile: { income: { min: 0 } },
       name: 'ペイトナー（フリーランス報酬前払い）',
       tagline: '請求書払いのタイムラグなく報酬をすぐに受け取りたいフリーランスの方へ',
       emoji: '💰',
@@ -185,6 +187,7 @@ export const sideHustleV2: DiagnosisV2Config = {
     },
     {
       id: 'virtual-office-zero',
+      matchProfile: { risk: { max: 0 }, independence: { min: 0 } },
       name: '0円バーチャルオフィス',
       tagline: '初期費用ゼロで法人登記用の住所を取得したい起業初心者の方へ',
       emoji: '🆓',
@@ -198,6 +201,7 @@ export const sideHustleV2: DiagnosisV2Config = {
     },
     {
       id: 'dairitencom',
+      matchProfile: { independence: { min: 0 } },
       name: '代理店ドットコム（副業・起業）',
       tagline: 'メーカーの代理店・販売パートナーとして副業・起業したい人へ',
       emoji: '🤝',
@@ -211,6 +215,7 @@ export const sideHustleV2: DiagnosisV2Config = {
     },
     {
       id: 'strategy-consultant-bank',
+      matchProfile: { income: { min: 0.3 }, independence: { min: 0.3 } },
       name: 'Strategy Consultant Bank',
       tagline: 'コンサルタントとして独立・副業案件を獲得したい方へ',
       emoji: '📊',
