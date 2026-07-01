@@ -290,7 +290,7 @@ function IntroScreen({ config, onStart }: { config: DiagnosisV2Config; onStart: 
           marginBottom: 36,
         }}
       >
-        質問数：{config.questions.length}問　所要時間：約3分
+        質問数：{config.questions.length}問 所要時間：約3分
       </div>
       <button onClick={onStart} className="btn btn-primary">
         診断をはじめる
@@ -414,66 +414,109 @@ function ResultScreen({ config, scores, diagnosisId }: { config: DiagnosisV2Conf
         相性の高い順に並んでいますが、実際の相性は使ってみないと分かりません。無料のサービスなら、上位2〜3個はまとめて試して、合わなかったものだけ後で外す形がおすすめです。
       </p>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginBottom: 44 }}>
+      {/* アフィリエイト強化された案件リスト */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 18, marginBottom: 44 }}>
         {top.map((s, idx) => {
           const cardContent = (
-            <>
-              {s.bannerImage ? (
-                <img
-                  src={s.bannerImage}
-                  alt={s.name}
-                  width={s.bannerWidth}
-                  height={s.bannerHeight}
-                  style={{ borderRadius: 8, flexShrink: 0, maxWidth: 120, height: 'auto' }}
-                />
-              ) : (
-                <div style={{ fontSize: '1.8rem', flexShrink: 0 }}>{s.emoji}</div>
-              )}
-              <div style={{ flex: 1 }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6, flexWrap: 'wrap' }}>
-                  <h3 style={{ fontSize: '0.98rem', color: 'var(--chrono-white)', margin: 0 }}>{s.name}</h3>
+            <div style={{ display: 'flex', gap: 20, alignItems: 'center', width: '100%', flexWrap: 'wrap' }}>
+              
+              {/* 左側：イメージエリア */}
+              <div style={{ display: 'flex', justifyContent: 'center', minWidth: 120 }}>
+                {s.bannerImage ? (
+                  <img
+                    src={s.bannerImage}
+                    alt={s.name}
+                    width={s.bannerWidth}
+                    height={s.bannerHeight}
+                    style={{ borderRadius: 8, maxWidth: 120, height: 'auto', border: '1px solid rgba(192, 214, 242, 0.1)' }}
+                  />
+                ) : (
+                  <div style={{ fontSize: '2.5rem', filter: 'drop-shadow(0 2px 8px rgba(212,175,55,0.3))' }}>{s.emoji}</div>
+                )}
+              </div>
+
+              {/* 中央：テキストエリア */}
+              <div style={{ flex: 1, minWidth: 260 }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8, flexWrap: 'wrap' }}>
+                  <h3 style={{ fontSize: '1.05rem', color: 'var(--chrono-white)', margin: 0, fontWeight: 700 }}>{s.name}</h3>
                   <span
                     style={{
-                      fontSize: '0.68rem',
+                      fontSize: '0.7rem',
+                      fontWeight: 700,
                       color: 'var(--chrono-gold)',
+                      background: 'rgba(212,175,55,0.06)',
                       border: '1px solid rgba(212,175,55,0.4)',
-                      borderRadius: 999,
+                      borderRadius: 4,
                       padding: '2px 9px',
                     }}
                   >
-                    相性 {s.matchScore}%
+                    ✦ マッチ度 {s.matchScore}%
                   </span>
                   {s.comingSoon && (
                     <span style={{ fontSize: '0.66rem', color: 'var(--chrono-text-dim)' }}>準備中</span>
                   )}
                   {s.isAffiliate && (
-                    <span style={{ fontSize: '0.62rem', color: 'var(--chrono-text-dim)' }}>PR</span>
+                    <span style={{ fontSize: '0.62rem', color: 'var(--chrono-text-dim)', letterSpacing: '0.05em' }}>PR</span>
                   )}
                 </div>
                 <p style={{ fontSize: '0.84rem', color: 'var(--chrono-text-dim)', lineHeight: 1.7, margin: 0 }}>
                   {s.tagline}
                 </p>
               </div>
-            </>
+
+              {/* 右側：強力なアクションボタンエリア（今回の一番のテコ入れ項目） */}
+              <div style={{ minWidth: 180, textAlign: 'center', marginLeft: 'auto' }} className="cta-button-container">
+                <p style={{ fontSize: '0.68rem', color: 'var(--chrono-gold)', margin: '0 0 6px 0', fontWeight: 600 }}>
+                  ✦ オンライン・完全無料 ✦
+                </p>
+                <div style={{
+                  background: idx === 0 
+                    ? 'linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%)' 
+                    : 'linear-gradient(135deg, #1e293b 0%, #020617 100%)',
+                  border: idx === 0 
+                    ? '1px solid var(--chrono-gold)' 
+                    : '1px solid rgba(192, 214, 242, 0.25)',
+                  color: 'var(--chrono-white)',
+                  borderRadius: 6,
+                  padding: '10px 16px',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  boxShadow: idx === 0 
+                    ? '0 4px 14px rgba(212,175,55,0.15)' 
+                    : '0 4px 10px rgba(0,0,0,0.3)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                }}>
+                  未来の可能性を確認する ➔
+                </div>
+              </div>
+
+            </div>
           );
 
           const cardStyle: React.CSSProperties = {
             display: 'flex',
-            alignItems: 'flex-start',
-            gap: 16,
-            borderColor: idx === 0 ? 'rgba(212,175,55,0.4)' : undefined,
+            alignItems: 'center',
+            border: '1px solid rgba(192,214,242,0.12)',
+            borderRadius: 12,
+            background: idx === 0 ? 'rgba(212,175,55,0.02)' : 'rgba(192,214,242,0.02)',
+            borderColor: idx === 0 ? 'rgba(212,175,55,0.35)' : undefined,
+            textDecoration: 'none',
+            transition: 'all 0.25s ease',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
           };
 
           if (s.href && !s.comingSoon) {
             return (
-              <>
-                <a key={s.id} href={s.href} target="_blank" rel="nofollow noopener noreferrer" className="glass-card card-pad" style={cardStyle}>
+              <div key={s.id} style={{ display: 'block' }}>
+                <a href={s.href} target="_blank" rel="nofollow noopener noreferrer" className="glass-card card-pad src-card-anchor" style={cardStyle}>
                   {cardContent}
                 </a>
                 {s.impUrl && (
                   <img src={s.impUrl} width={1} height={1} style={{ border: 'none', display: 'block' }} loading="lazy" alt="" />
                 )}
-              </>
+              </div>
             );
           }
 
@@ -484,6 +527,20 @@ function ResultScreen({ config, scores, diagnosisId }: { config: DiagnosisV2Conf
           );
         })}
       </div>
+
+      <style>{`
+        .src-card-anchor:hover {
+          border-color: var(--chrono-gold) !important;
+          background: rgba(212,175,55,0.05) !important;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(212,175,55,0.08) !important;
+        }
+        .src-card-anchor:hover .cta-button-container div {
+          background: linear-gradient(135deg, var(--chrono-gold) 0%, #8a6f23 100%) !important;
+          color: #060d1f !important;
+          box-shadow: 0 4px 12px rgba(212,175,55,0.4) !important;
+        }
+      `}</style>
 
       <div
         className="glass-card card-pad"
